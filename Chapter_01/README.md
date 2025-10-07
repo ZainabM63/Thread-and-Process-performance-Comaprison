@@ -1,6 +1,6 @@
 Multiprocessing vs Multithreading in Python
 
-This project compares the performance of multiprocessing and multithreading in Python by running the same function (do_something) under different conditions. The aim is to analyze which approach performs better for the given workload and why.
+This project compares the performance of multiprocessing and multithreading in Python by running the same function (do_something) under different conditions. The aim is to analyze which approach performs better for the given workload and why.This function performs repeated mathematical operations (sqrt and power) and appends the results to a shared list.
 
 Experiment Setup
 

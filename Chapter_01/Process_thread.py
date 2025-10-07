@@ -5,7 +5,7 @@ import threading
 
 if __name__ == "__main__":
     size = 1000  # workload size
-    procs = 5       # number of processes
+    procs = 5      # number of processes
     jobs = []
 
     

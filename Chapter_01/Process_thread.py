@@ -5,7 +5,7 @@ import threading
 
 if __name__ == "__main__":
     size = 1000  # workload size
-    procs = 10     # number of processes
+    procs = 50     # number of processes
     jobs = []
 
     
@@ -31,7 +31,7 @@ if __name__ == "__main__":
     # Multithreading
     
     jobs = []
-    threads = 10       # number of threads
+    threads = 50       # number of threads
     start_time = time.time()
     out_list = []
 

@@ -80,50 +80,6 @@ Monitor: Current length = 21
 
 ---
 
-<table>
-  <thead>
-    <tr>
-      <th>Synchronization Type</th>
-      <th>Main Use</th>
-      <th>Behavior</th>
-      <th>Safety</th>
-      <th>Best For</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Lock</td>
-      <td>Prevents simultaneous access</td>
-      <td>Sequential execution</td>
-      <td>Safe</td>
-      <td>General thread safety</td>
-    </tr>
-    <tr>
-      <td>RLock</td>
-      <td>Reentrant version of Lock</td>
-      <td>Similar to Lock</td>
-      <td>Safe</td>
-      <td>Nested locking scenarios</td>
-    </tr>
-    <tr>
-      <td>Semaphore</td>
-      <td>Limits concurrent access</td>
-      <td>Controlled parallelism</td>
-      <td>Safe</td>
-      <td>Managing limited resources</td>
-    </tr>
-    <tr>
-      <td>Condition</td>
-      <td>Waits for specific conditions/signals</td>
-      <td>Event-driven coordination</td>
-      <td>Safe</td>
-      <td>Producer-consumer models</td>
-    </tr>
-  </tbody>
-</table>
-
----
-
 ## Unified Conclusion
 
 All four synchronization mechanisms — Lock, RLock, Semaphore, and Condition — successfully maintained data integrity during concurrent execution. Each method produced the expected number of items in the shared list (21) and prevented race conditions. Lock and RLock provide straightforward mutual exclusion (RLock is for reentrant/nested locking), Semaphore controls the number of simultaneous workers for limited resources, and Condition allows threads to coordinate by waiting and notifying based on state. Choose the primitive that matches your concurrency requirement: use Lock/RLock for simple mutual exclusion, Semaphore for limiting concurrent access, and Condition for coordination-driven scenarios.

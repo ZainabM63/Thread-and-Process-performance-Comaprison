@@ -244,7 +244,3 @@ Python’s `multiprocessing` module provides powerful and flexible ways to achie
 Understanding process behavior—naming, daemonization, synchronization, and pooling—is essential for designing efficient and robust concurrent applications.
 
 ---
-
-```
-
----

@@ -1,11 +1,11 @@
 import multiprocessing
-from do_something import do_something  # imported function
+from do_something import do_something
 
 def function_square(data):
-    do_something()  
+    results = []
+    do_something(2, results)     # ✅ correct call
     result = data * data
     return result
-
 
 if __name__ == '__main__':
     inputs = list(range(0, 10))

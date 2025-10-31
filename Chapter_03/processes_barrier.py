@@ -2,21 +2,25 @@ import multiprocessing
 from multiprocessing import Barrier, Lock, Process
 from time import time
 from datetime import datetime
-from do_something import do_something  # imported function
+from do_something import do_something
 
 def test_with_barrier(synchronizer, serializer):
     name = multiprocessing.current_process().name
     synchronizer.wait()
     now = time()
     with serializer:
-        print("process %s ----> %s" % (name, datetime.fromtimestamp(now)))
-        do_something()  # call imported function here
+        print(f"process {name} ----> {datetime.fromtimestamp(now)}")
+        results = []
+        do_something(2, results)   # ✅ correct call
+        print(f"{name} results: {results}")
 
 def test_without_barrier():
     name = multiprocessing.current_process().name
     now = time()
-    print("process %s ----> %s" % (name, datetime.fromtimestamp(now)))
-    do_something()  # call imported function here
+    print(f"process {name} ----> {datetime.fromtimestamp(now)}")
+    results = []
+    do_something(2, results)       # ✅ correct call
+    print(f"{name} results: {results}")
 
 
 if __name__ == '__main__':
